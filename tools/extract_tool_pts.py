@@ -92,7 +92,7 @@ class ToolExtractor:
             return out
         
 
-        contours, heirarchy = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+        _, contours, heirarchy = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
         areas = [cv2.contourArea(c) for c in contours]
         sorted_areas = np.sort(areas)
 
